@@ -26,3 +26,31 @@ class Snake():
             self.segments[seg_num].goto(new_x, new_y)
 
         self.segments[0].forward(move_distance)
+
+    def up(self):
+        if self.segments[0].heading() == 270:
+            pass
+        else:
+            self.segments[0].setheading(90)
+            self.move()
+
+    def down(self):
+        if self.segments[0].heading() == 90:
+            pass
+        else:
+            self.segments[0].setheading(270)
+            self.move()
+
+    def left(self):
+        if self.segments[0].heading() == 0:
+            pass
+        else:
+            self.segments[0].setheading(180)
+            self.move()
+
+    def right(self):
+        if self.segments[0].heading() == 180:
+            pass
+        else:
+            self.segments[0].setheading(0)
+            self.move()
